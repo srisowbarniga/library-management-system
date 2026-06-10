@@ -1,0 +1,133 @@
+.login-body{
+    margin:0;
+    font-family:Arial,sans-serif;
+    background:#f4f6f9;
+}
+
+.login-container{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.login-card{
+    width:400px;
+    background:white;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.2);
+    text-align:center;
+}
+
+.login-card h1{
+    margin-bottom:25px;
+}
+
+.login-card input[type=text],
+.login-card input[type=password]{
+    width:100%;
+    padding:12px;
+    margin:10px 0;
+    border:1px solid #ccc;
+    border-radius:8px;
+}
+
+.role-selection{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    margin:15px 0;
+}
+
+.login-card button{
+    width:100%;
+    padding:12px;
+    background:#3498db;
+    color:white;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+.forgot{
+    margin-top:15px;
+}
+
+.forgot a{
+    text-decoration:none;
+    color:#3498db;
+}
+/* Dashboard Styles */
+
+body{
+    margin:0;
+    font-family:Arial, sans-serif;
+    background:#f4f6f9;
+}
+
+header{
+    background:#2c3e50;
+    color:white;
+    text-align:center;
+    padding:25px;
+}
+
+.container{
+    width:90%;
+    margin:auto;
+    padding-top:20px;
+}
+
+.dashboard{
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:20px;
+}
+
+.card{
+    background:white;
+    width:220px;
+    padding:25px;
+    border-radius:15px;
+    text-align:center;
+    box-shadow:0 4px 10px rgba(0,0,0,0.1);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+}
+
+.card h2{
+    color:#3498db;
+    font-size:40px;
+    margin:0;
+}
+
+.card p{
+    font-size:18px;
+}
+
+.menu{
+    margin-top:40px;
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:15px;
+}
+
+.menu a{
+    text-decoration:none;
+    background:#3498db;
+    color:white;
+    padding:15px 25px;
+    border-radius:10px;
+    font-size:18px;
+    transition:0.3s;
+}
+
+.menu a:hover{
+    background:#2980b9;
+}
