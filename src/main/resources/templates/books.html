@@ -24,6 +24,7 @@
                 <th>Author</th>
                 <th>Price</th>
                 <th>Status</th>
+                <th th:if="${role == 'admin'}">Action</th>
             </tr>
 
             <tr th:each="book : ${books}">
@@ -32,9 +33,25 @@
                 <td th:text="${book.author}"></td>
                 <td th:text="${book.price}"></td>
                 <td th:text="${book.available ? 'Available' : 'Issued'}"></td>
+                <td th:if="${role == 'admin'}">
+                    <a th:href="@{/books/edit/{id}(id=${book.id})}">✏ Edit</a> |
+                    <a th:href="@{/books/delete/{id}(id=${book.id})}"
+                       onclick="return confirm('Delete this book?');">🗑 Delete</a>
+                </td>
             </tr>
 
         </table>
+
+        <div th:if="${role == 'admin'}" style="margin-top:20px;">
+            <h3>Add New Book</h3>
+            <form action="/books/add" method="post">
+                <input type="text" name="title" placeholder="Title" required><br><br>
+                <input type="text" name="author" placeholder="Author" required><br><br>
+                <input type="number" name="price" step="0.01" placeholder="Price" required><br><br>
+                <label><input type="checkbox" name="available" value="true" checked> Available</label><br><br>
+                <button type="submit">Add Book</button>
+            </form>
+        </div>
 
         <br>
 

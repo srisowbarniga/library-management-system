@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Library Management System</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+<header>
+    <h1>📚 Library Management System</h1>
+</header>
+
+<div class="container">
+
+    <div class="dashboard">
+
+        <div class="card">
+            <h2>150</h2>
+            <p>Total Books</p>
+        </div>
+
+        <div class="card">
+            <h2>45</h2>
+            <p>Total Members</p>
+        </div>
+
+        <div class="card">
+            <h2>12</h2>
+            <p>Issued Books</p>
+        </div>
+
+        <div class="card">
+            <h2>138</h2>
+            <p>Available Books</p>
+        </div>
+
+    </div>
+
+    <div class="menu">
+
+        <a href="/books">📚 Book Management</a>
+
+        <a th:if="${role == 'admin'}" href="/members">👤 Member
