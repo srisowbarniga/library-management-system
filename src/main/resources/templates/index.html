@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
     <title>Library Management System</title>
     <link rel="stylesheet" href="/style.css">
@@ -15,12 +15,12 @@
     <div class="dashboard">
 
         <div class="card">
-			<h2>150</h2>
+            <h2>150</h2>
             <p>Total Books</p>
         </div>
 
         <div class="card">
-			<h2>45</h2>
+            <h2>45</h2>
             <p>Total Members</p>
         </div>
 
@@ -38,15 +38,16 @@
 
     <div class="menu">
 
-		<a href="/books">📚 Book Management</a>
+        <a th:if="${role == 'admin'}" href="/books">📚 Book Management</a>
+        <a th:if="${role == 'admin'}" href="/members">👤 Member Management</a>
+        <a th:if="${role == 'admin'}" href="/issue-books">📖 Issue Book</a>
+        <a th:if="${role == 'admin'}" href="/return-books">↩ Return Book</a>
+        <a th:if="${role == 'admin'}" href="/reports">📊 Reports</a>
 
-		<a href="/members">👤 Member Management</a>
+        <a th:if="${role == 'student'}" href="/search-book">🔍 Search Books</a>
+        <a th:if="${role == 'student'}" href="/my-account">👤 My Account</a>
 
-		<a href="/issue-books">📖 Issue Book</a>
-		<a href="/return-books">↩ Return Book</a>
-		<a href="/reports">📊 Reports</a>
-
-        <a href="/">🚪 Logout</a>
+        <a href="/logout">🚪 Logout</a>
 
     </div>
 
